@@ -1,8 +1,3 @@
-Here's a sample README.md file in Markdown format for your rootkit detection project using stacked machine learning ensembles:
-
-markdown
-Copy
-Edit
 # Rootkit Detection Using Stacked Machine Learning Ensembles
 
 This project aims to enhance system security by detecting potential rootkits using a machine learning-based ensemble model. A Streamlit web application allows users to input system behavior data manually or via a file to detect rootkit presence.
@@ -26,51 +21,45 @@ This project aims to enhance system security by detecting potential rootkits usi
 
 ```bash
 pip install streamlit pandas scikit-learn
+```
 Start the Application
-bash
-Copy
-Edit
+```bash
 streamlit run app.py
-🧠 How It Works
+```
+## 🧠 How It Works
 The model takes a set of binary features representing suspicious Android system behavior and predicts whether the behavior indicates the presence of a rootkit.
 
-Prediction Options:
-Upload a File:
+### Prediction Options:
+#### 1. Upload a File:
 
 Upload a .txt file with feature-value pairs (e.g., SEND_SMS 1.0).
 
 The app parses and feeds the data to the trained model for prediction.
 
-Manual Selection:
+#### 2. Manual Selection:
 
 Select suspicious behaviors from a multiselect widget.
 
 The app constructs a feature vector and uses the model to predict rootkit presence.
 
-📦 Features
+## Features
 A total of 183+ features derived from Android permissions, API calls, and system operations, such as:
 
-SEND_SMS, READ_PHONE_STATE, Runtime.exec, INTERNET, READ_SMS
+`SEND_SMS`, `READ_PHONE_STATE`, `Runtime.exec`, `INTERNET`, `READ_SMS`
 
-CALL_PHONE, INSTALL_PACKAGES, System.loadLibrary, etc.
+`CALL_PHONE`, `INSTALL_PACKAGES`, `System.loadLibrary`, etc.
 
-See test.py or app.py for the complete list.
+See `test.py` or `app.py` for the complete list.
 
-📊 Model
+### 📊 Model
 Stacked ensemble model trained using multiple base learners (defined in Rootkit (1).ipynb).
 
 Model is saved as model.pkl and loaded in app.py.
 
-⚠️ Note
+### ⚠️ Note
 Ensure model.pkl exists in the root directory before running the app.
 
 Input files must be placed in the sample_inputs/ directory and formatted properly.
 
-🛡️ Security Purpose
+### 🛡️ Security Purpose
 This tool is intended for research and educational use only. Unauthorized detection, surveillance, or classification of software without consent is discouraged.
-
-vbnet
-Copy
-Edit
-
-Would you like me to generate a downloadable `.md` file for this?
